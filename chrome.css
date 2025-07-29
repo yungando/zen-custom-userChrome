@@ -1,63 +1,70 @@
 /* ---------- Dark Mode ---------- */
-:root {
-  --zen-primary-color: #808080 !important;
-}
-
-@media not (prefers-color-scheme: dark) {
+@media (-moz-bool-pref: "ando.monochrome-theme") {
   :root {
-    --zen-colors-primary: #D2D2D2 !important;
-    --zen-colors-secondary: #D2D2D2 !important;
-    --zen-colors-tertiary: #FFFFFF !important;
-    --zen-colors-border: #DDDDDD !important;
+    --zen-primary-color: #808080 !important;
+  }
+
+  @media not (prefers-color-scheme: dark) {
+    :root {
+      --zen-colors-primary: #D2D2D2 !important;
+      --zen-colors-secondary: #D2D2D2 !important;
+      --zen-colors-tertiary: #FFFFFF !important;
+      --zen-colors-border: #DDDDDD !important;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --zen-colors-primary: #373737 !important;
+      --zen-colors-secondary: #373737 !important;
+      --zen-colors-tertiary: #171717 !important;
+      --zen-colors-border: #202020 !important;
+    }
+  }
+
+  .toolbarbutton-badge {
+    color: #0f0f0f !important;
+    background-color: #ffffff !important;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --zen-colors-primary: #373737 !important;
-    --zen-colors-secondary: #373737 !important;
-    --zen-colors-tertiary: #171717 !important;
-    --zen-colors-border: #202020 !important;
+/* ---------- No Media Tab Icon ---------- */
+@media (-moz-bool-pref: "ando.hide-tab-media-icon") {
+  .tab-icon-overlay {
+    display: none !important;
   }
 }
 
-/* ---------- Dark Mode ---------- */
-
-/* ---------- No Media Tab Icon ---------- */
-.tab-icon-overlay {
-  display: none !important;
-}
-
-/* ---------- No Media Tab Icon ---------- */
-
 /* ---------- No Window Dragging ---------- */
-#titlebar {
-  -moz-window-dragging: no-drag;
-}
-
-/* ---------- No Window Dragging ---------- */
-
-/* ---------- Context Menu Hides ---------- */
-#context-zen-change-workspace-tab,
-#context_undoCloseTab,
-#zen-toolbar-context-tabs-right,
-#toolbar-context-undoCloseTab {
-  display: none !important;
+@media (-moz-bool-pref: "ando.disable-window-dragging") {
+  #titlebar {
+    -moz-window-dragging: no-drag;
+  }
 }
 
 /* ---------- Context Menu Hides ---------- */
+@media (-moz-bool-pref: "ando.context-menu-hides") {
 
-/* ---------- URL Bar Hides ---------- */
-#reader-mode-button,
-#translations-button,
-#identity-box,
-#star-button-box,
-#tracking-protection-icon-container {
-  display: none !important;
-}
-
-#searchbar .urlbar-input-container {
-  padding-left: calc(var(--urlbar-container-padding) + var(--urlbar-container-padding)) !important;
+  #context-zen-change-workspace-tab,
+  #context_undoCloseTab,
+  #zen-toolbar-context-tabs-right,
+  #toolbar-context-undoCloseTab {
+    display: none !important;
+  }
 }
 
 /* ---------- URL Bar Hides ---------- */
+@media (-moz-bool-pref: "ando.url-bar-hides") {
+
+  #reader-mode-button,
+  #translations-button,
+  #identity-box,
+  #star-button-box,
+  #tracking-protection-icon-container {
+    display: none !important;
+  }
+
+  #searchbar .urlbar-input-container {
+    padding-left: calc(var(--urlbar-container-padding) + var(--urlbar-container-padding)) !important;
+  }
+}

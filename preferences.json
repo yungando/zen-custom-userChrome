@@ -1,0 +1,32 @@
+[
+  {
+    "property": "ando.monochrome-theme",
+    "label": "Enable Monochrome Theme",
+    "type": "checkbox",
+    "defaultValue": true
+  },
+  {
+    "property": "ando.hide-tab-media-icon",
+    "label": "Hide the media icon on tabs",
+    "type": "checkbox",
+    "defaultValue": true
+  },
+  {
+    "property": "ando.disable-window-dragging",
+    "label": "Disable window dragging",
+    "type": "checkbox",
+    "defaultValue": true
+  },
+  {
+    "property": "ando.context-menu-hides",
+    "label": "Hide extra context menu options",
+    "type": "checkbox",
+    "defaultValue": true
+  },
+  {
+    "property": "ando.url-bar-hides",
+    "label": "Hide URL bar buttons",
+    "type": "checkbox",
+    "defaultValue": true
+  }
+]
