@@ -48,8 +48,28 @@
   #context-zen-change-workspace-tab,
   #context_undoCloseTab,
   #zen-toolbar-context-tabs-right,
-  #toolbar-context-undoCloseTab {
+  #toolbar-context-undoCloseTab,
+  #zenToolbarThemePicker,
+  #toolbar-context-customize,
+  #menuitem-iconic context-menu-add-engine {
     display: none !important;
+  }
+
+  #zen-context-menu-compact-mode-toggle>label {
+    font-size: 0;
+  }
+
+  #zen-context-menu-compact-mode-toggle>label:before {
+    content: "Toggle compact mode";
+    font: menu;
+  }
+
+  #zen-context-menu-compact-mode-toggle>image.menu-icon {
+    visibility: collapse !important;
+  }
+
+  menuitem.context-menu-add-engine[anonid="add-engine-0"] {
+    visibility: collapse !important;
   }
 }
 
@@ -66,5 +86,16 @@
 
   #searchbar .urlbar-input-container {
     padding-left: calc(var(--urlbar-container-padding) + var(--urlbar-container-padding)) !important;
+  }
+}
+
+@media (-moz-bool-pref: "ando.expand-sidebar-tweaks") {
+  .tab-reset-pin-button:after {
+    display: none !important;
+  }
+
+  :root#main-window:not([sizemode="fullscreen"]) #navigator-toolbox:not([zen-right-side="true"]) .tabbrowser-tab.tabbrowser-tab[zen-pinned-changed][pinned] .tab-icon-stack.tab-icon-stack {
+    position: static !important;
+    transform: none !important;
   }
 }
