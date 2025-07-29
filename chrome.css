@@ -1,0 +1,63 @@
+/* ---------- Dark Mode ---------- */
+:root {
+  --zen-primary-color: #808080 !important;
+}
+
+@media not (prefers-color-scheme: dark) {
+  :root {
+    --zen-colors-primary: #D2D2D2 !important;
+    --zen-colors-secondary: #D2D2D2 !important;
+    --zen-colors-tertiary: #FFFFFF !important;
+    --zen-colors-border: #DDDDDD !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --zen-colors-primary: #373737 !important;
+    --zen-colors-secondary: #373737 !important;
+    --zen-colors-tertiary: #171717 !important;
+    --zen-colors-border: #202020 !important;
+  }
+}
+
+/* ---------- Dark Mode ---------- */
+
+/* ---------- No Media Tab Icon ---------- */
+.tab-icon-overlay {
+  display: none !important;
+}
+
+/* ---------- No Media Tab Icon ---------- */
+
+/* ---------- No Window Dragging ---------- */
+#titlebar {
+  -moz-window-dragging: no-drag;
+}
+
+/* ---------- No Window Dragging ---------- */
+
+/* ---------- Context Menu Hides ---------- */
+#context-zen-change-workspace-tab,
+#context_undoCloseTab,
+#zen-toolbar-context-tabs-right,
+#toolbar-context-undoCloseTab {
+  display: none !important;
+}
+
+/* ---------- Context Menu Hides ---------- */
+
+/* ---------- URL Bar Hides ---------- */
+#reader-mode-button,
+#translations-button,
+#identity-box,
+#star-button-box,
+#tracking-protection-icon-container {
+  display: none !important;
+}
+
+#searchbar .urlbar-input-container {
+  padding-left: calc(var(--urlbar-container-padding) + var(--urlbar-container-padding)) !important;
+}
+
+/* ---------- URL Bar Hides ---------- */
