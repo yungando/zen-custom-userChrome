@@ -89,6 +89,7 @@
   }
 }
 
+/* ---------- Expanded Sidebar Tweaks ---------- */
 @media (-moz-bool-pref: "ando.expand-sidebar-tweaks") {
   .tab-reset-pin-button:after {
     display: none !important;

@@ -28,5 +28,11 @@
     "label": "Hide URL bar buttons",
     "type": "checkbox",
     "defaultValue": true
+  },
+  {
+    "property": "ando.expand-sidebar-tweaks",
+    "label": "Expanded sidebar tweaks",
+    "type": "checkbox",
+    "defaultValue": true
   }
 ]
