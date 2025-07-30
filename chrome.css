@@ -99,4 +99,9 @@
     position: static !important;
     transform: none !important;
   }
+
+  button[aria-label="Unmute tab"],
+  button[aria-label="Play tab"] {
+    display: none !important;
+  }
 }
