@@ -102,4 +102,14 @@
     position: static !important;
     transform: none !important;
   }
+
+  #tabbrowser-tabs {
+    & .tabbrowser-tab {
+
+      &[pinned]:not([zen-essential]):hover .tab-close-button.close-icon,
+      &[pinned][visuallyselected]:not([zen-essential]) .tab-close-button.close-icon {
+        display: none !important;
+      }
+    }
+  }
 }
