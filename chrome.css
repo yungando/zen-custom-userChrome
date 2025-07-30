@@ -76,19 +76,16 @@
   }
 }
 
-/* ---------- URL Bar Hides ---------- */
-@media (-moz-bool-pref: "ando.url-bar-hides") {
-
-  #reader-mode-button,
-  #translations-button,
-  #identity-box,
-  #star-button-box,
-  #tracking-protection-icon-container {
-    display: none !important;
-  }
-
-  #searchbar .urlbar-input-container {
-    padding-left: calc(var(--urlbar-container-padding) + var(--urlbar-container-padding)) !important;
+/* ---------- URL Bar Set Height ---------- */
+@media (-moz-bool-pref: "ando.url-bar-height") {
+  #urlbar:not([zen-floating-urlbar="true"]) {
+    height: 36px !important;
+    min-height: 36px !important;
+    max-height: 36px !important;
+    line-height: 36px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    box-sizing: border-box !important;
   }
 }
 
@@ -115,5 +112,71 @@
 
   .titlebar-buttonbox-container {
     display: none !important;
+  }
+}
+
+/* ---------- URL Bar Search Icon ---------- */
+@media (-moz-bool-pref: "ando.urlbar-search-icon") {
+
+  /* Layout structure for non-floating URL bar */
+  #urlbar:not([zen-floating-urlbar="true"]) {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    overflow: hidden;
+  }
+
+  /* Icon: only injected in non-floating state */
+  #urlbar:not([zen-floating-urlbar="true"])::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 38px;
+    /* space that overlaps where input text normally starts */
+    height: 100%;
+    pointer-events: none;
+
+    background-image: url("chrome://global/skin/icons/search-glass.svg");
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: center;
+
+    -moz-context-properties: fill, stroke;
+    fill: currentColor;
+
+    opacity: 1;
+    transform: translateX(0);
+    transition:
+      opacity var(--transition-duration) ease-in-out var(--transition-delay-smooth),
+      transform var(--transition-duration) ease-in-out var(--transition-delay-smooth);
+  }
+
+  /* Animate icon out on sidebar hover or floating */
+  #navigator-toolbox:is( :hover,
+    [has-popup-menu],
+    [movingtab],
+    [flash-popup]) #urlbar:not([zen-floating-urlbar="true"])::before {
+    opacity: 0;
+    transform: translateX(-38px);
+  }
+
+  /* Hide text when collapsed */
+  #urlbar-input {
+    transform: translateX(38px);
+    opacity: 0;
+    transition:
+      opacity var(--transition-duration) ease-in-out var(--transition-delay-smooth),
+      transform var(--transition-duration) ease-in-out var(--transition-delay-smooth);
+  }
+
+  /* Show text when sidebar expanded or floating */
+  #navigator-toolbox:is( :hover,
+    [has-popup-menu],
+    [movingtab],
+    [flash-popup]) #urlbar-input,
+  #urlbar[zen-floating-urlbar="true"] #urlbar-input {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
