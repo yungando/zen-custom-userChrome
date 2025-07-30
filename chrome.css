@@ -30,7 +30,10 @@
 
 /* ---------- No Media Tab Icon ---------- */
 @media (-moz-bool-pref: "ando.hide-tab-media-icon") {
-  .tab-icon-overlay {
+
+  .tab-icon-overlay,
+  button[aria-label="Unmute tab"],
+  button[aria-label="Play tab"] {
     display: none !important;
   }
 }
@@ -98,10 +101,5 @@
   :root#main-window:not([sizemode="fullscreen"]) #navigator-toolbox:not([zen-right-side="true"]) .tabbrowser-tab.tabbrowser-tab[zen-pinned-changed][pinned] .tab-icon-stack.tab-icon-stack {
     position: static !important;
     transform: none !important;
-  }
-
-  button[aria-label="Unmute tab"],
-  button[aria-label="Play tab"] {
-    display: none !important;
   }
 }
