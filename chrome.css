@@ -114,6 +114,15 @@
     display: none !important;
   }
 
+  #zen-sidebar-foot-buttons>toolbaritem:first-of-type {
+    margin-inline-start: 4px !important;
+  }
+
+  #zen-sidebar-foot-buttons {
+    margin-bottom: 4px !important;
+    /* adjust as needed */
+  }
+
   #navigator-toolbox:not(:hover) #zen-sidebar-foot-buttons>toolbaritem:first-of-type {
     opacity: 1 !important;
   }
