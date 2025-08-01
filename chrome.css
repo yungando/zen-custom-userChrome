@@ -113,6 +113,17 @@
   .titlebar-buttonbox-container {
     display: none !important;
   }
+
+  #navigator-toolbox:not(:hover) #zen-sidebar-foot-buttons>toolbaritem:first-of-type {
+    opacity: 1 !important;
+  }
+
+  #navigator-toolbox #zen-sidebar-foot-buttons>#customizationui-widget-panel,
+  #navigator-toolbox #zen-sidebar-foot-buttons>#customizationui-widget-panel * {
+    transition: none !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
 }
 
 /* ---------- URL Bar Search Icon ---------- */
