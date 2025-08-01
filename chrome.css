@@ -120,7 +120,6 @@
 
   #zen-sidebar-foot-buttons {
     margin-bottom: 4px !important;
-    /* adjust as needed */
   }
 
   #navigator-toolbox:not(:hover) #zen-sidebar-foot-buttons>toolbaritem:first-of-type {
@@ -137,8 +136,6 @@
 
 /* ---------- URL Bar Search Icon ---------- */
 @media (-moz-bool-pref: "ando.urlbar-search-icon") {
-
-  /* Layout structure for non-floating URL bar */
   #urlbar:not([zen-floating-urlbar="true"]) {
     position: relative !important;
     display: flex !important;
@@ -146,25 +143,20 @@
     overflow: hidden;
   }
 
-  /* Icon: only injected in non-floating state */
   #urlbar:not([zen-floating-urlbar="true"])::before {
     content: '';
     position: absolute;
     left: 0;
     top: 0;
     width: 38px;
-    /* space that overlaps where input text normally starts */
     height: 100%;
     pointer-events: none;
-
     background-image: url("chrome://global/skin/icons/search-glass.svg");
     background-repeat: no-repeat;
     background-size: 16px 16px;
     background-position: center;
-
     -moz-context-properties: fill, stroke;
     fill: currentColor;
-
     opacity: 1;
     transform: translateX(0);
     transition:
@@ -172,7 +164,6 @@
       transform var(--transition-duration) ease-in-out var(--transition-delay-smooth);
   }
 
-  /* Animate icon out on sidebar hover or floating */
   #navigator-toolbox:is( :hover,
     [has-popup-menu],
     [movingtab],
@@ -181,8 +172,7 @@
     transform: translateX(-38px);
   }
 
-  /* Hide text when collapsed */
-  #urlbar-input {
+  #urlbar:not([zen-floating-urlbar="true"]) #urlbar-input {
     transform: translateX(38px);
     opacity: 0;
     transition:
@@ -190,7 +180,6 @@
       transform var(--transition-duration) ease-in-out var(--transition-delay-smooth);
   }
 
-  /* Show text when sidebar expanded or floating */
   #navigator-toolbox:is( :hover,
     [has-popup-menu],
     [movingtab],
