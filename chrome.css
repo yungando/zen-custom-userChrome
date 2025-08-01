@@ -122,8 +122,18 @@
     margin-bottom: 4px !important;
   }
 
-  #navigator-toolbox:not(:hover) #zen-sidebar-foot-buttons>toolbaritem:first-of-type {
+  #navigator-toolbox:not(:hover,
+    [has-popup-menu],
+    [movingtab],
+    [flash-popup]) #zen-sidebar-foot-buttons>toolbaritem:first-of-type {
     opacity: 1 !important;
+  }
+
+  #navigator-toolbox:not(:hover,
+    [has-popup-menu],
+    [movingtab],
+    [flash-popup]) #zen-workspaces-button {
+    display: none !important;
   }
 
   #navigator-toolbox #zen-sidebar-foot-buttons>#customizationui-widget-panel,
