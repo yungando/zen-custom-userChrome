@@ -33,6 +33,7 @@
 
   .tab-icon-overlay,
   button[aria-label="Unmute tab"],
+  button[aria-label="Mute tab"],
   button[aria-label="Play tab"] {
     display: none !important;
   }
@@ -79,69 +80,16 @@
 
 /* ---------- URL Bar Set Height ---------- */
 @media (-moz-bool-pref: "ando.url-bar-height") {
-  #urlbar:not([zen-floating-urlbar="true"]) {
-    height: 36px !important;
-    min-height: 36px !important;
-    max-height: 36px !important;
-    line-height: 36px !important;
+
+  #urlbar:not([zen-floating-urlbar="true"]),
+  #urlbar-container {
+    height: 37px !important;
+    min-height: 37px !important;
+    max-height: 37px !important;
+    line-height: 37px !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     box-sizing: border-box !important;
-  }
-}
-
-/* ---------- Expanded Sidebar Tweaks ---------- */
-@media (-moz-bool-pref: "ando.expand-sidebar-tweaks") {
-  .tab-reset-pin-button:after {
-    display: none !important;
-  }
-
-  :root#main-window:not([sizemode="fullscreen"]) #navigator-toolbox:not([zen-right-side="true"]) .tabbrowser-tab.tabbrowser-tab[zen-pinned-changed][pinned] .tab-icon-stack.tab-icon-stack {
-    position: static !important;
-    transform: none !important;
-  }
-
-  #tabbrowser-tabs {
-    & .tabbrowser-tab {
-
-      &[pinned]:not([zen-essential]):hover .tab-close-button.close-icon,
-      &[pinned][visuallyselected]:not([zen-essential]) .tab-close-button.close-icon {
-        display: none !important;
-      }
-    }
-  }
-
-  .titlebar-buttonbox-container {
-    display: none !important;
-  }
-
-  #zen-sidebar-foot-buttons>toolbaritem:first-of-type {
-    margin-inline-start: 5px !important;
-  }
-
-  #zen-sidebar-foot-buttons {
-    margin-bottom: 4px !important;
-  }
-
-  #navigator-toolbox:not(:hover,
-    [has-popup-menu],
-    [movingtab],
-    [flash-popup]) #zen-sidebar-foot-buttons>toolbaritem:first-of-type {
-    opacity: 1 !important;
-  }
-
-  #navigator-toolbox:not(:hover,
-    [has-popup-menu],
-    [movingtab],
-    [flash-popup]) #zen-workspaces-button {
-    display: none !important;
-  }
-
-  #navigator-toolbox #zen-sidebar-foot-buttons>#customizationui-widget-panel,
-  #navigator-toolbox #zen-sidebar-foot-buttons>#customizationui-widget-panel * {
-    transition: none !important;
-    transform: none !important;
-    clip-path: none !important;
   }
 }
 
@@ -198,5 +146,26 @@
   #urlbar[zen-floating-urlbar="true"] #urlbar-input {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+/* ---------- Hide Close Tab Button ---------- */
+@media (-moz-bool-pref: "ando.hide-close-tab") {
+  image.tab-close-button {
+    display: none !important;
+  }
+}
+
+/* ---------- Hide Status Bar ---------- */
+@media (-moz-bool-pref: "ando.hide-status-bar") {
+  #statuspanel {
+    display: none !important;
+  }
+}
+
+/* ---------- Hide Workspace Bar ---------- */
+@media (-moz-bool-pref: "ando.hide-workspace-bar") {
+  .zen-current-workspace-indicator {
+    display: none !important;
   }
 }

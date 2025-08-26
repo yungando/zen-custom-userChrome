@@ -30,14 +30,26 @@
     "defaultValue": true
   },
   {
-    "property": "ando.expand-sidebar-tweaks",
-    "label": "Expanded sidebar tweaks",
+    "property": "ando.urlbar-search-icon",
+    "label": "Display a search icon in the URLbar when the sidebar is collapsed",
     "type": "checkbox",
     "defaultValue": true
   },
   {
-    "property": "ando.urlbar-search-icon",
-    "label": "Display a search icon in the URLbar when the sidebar is collapsed",
+    "property": "ando.hide-close-tab",
+    "label": "Removes the close tab button",
+    "type": "checkbox",
+    "defaultValue": true
+  },
+  {
+    "property": "ando.hide-status-bar",
+    "label": "Removes the status bar",
+    "type": "checkbox",
+    "defaultValue": true
+  },
+  {
+    "property": "ando.hide-workspace-bar",
+    "label": "Removes the current workspace indicator",
     "type": "checkbox",
     "defaultValue": true
   }
