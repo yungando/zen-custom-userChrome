@@ -42,6 +42,12 @@
     "defaultValue": true
   },
   {
+    "property": "ando.hide-reset-tab",
+    "label": "Removes the reset tab button",
+    "type": "checkbox",
+    "defaultValue": true
+  },
+  {
     "property": "ando.hide-status-bar",
     "label": "Removes the status bar",
     "type": "checkbox",

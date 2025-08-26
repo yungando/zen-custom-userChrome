@@ -151,7 +151,14 @@
 
 /* ---------- Hide Close Tab Button ---------- */
 @media (-moz-bool-pref: "ando.hide-close-tab") {
-  image.tab-close-button {
+  .tab-close-button {
+    display: none !important;
+  }
+}
+
+/* ---------- Hide Reset Tab Button ---------- */
+@media (-moz-bool-pref: "ando.hide-reset-tab") {
+  .tab-reset-button {
     display: none !important;
   }
 }
