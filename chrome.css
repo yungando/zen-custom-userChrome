@@ -149,6 +149,13 @@
   }
 }
 
+/* ---------- Browser Content Drop Shadow  ---------- */
+@media (-moz-bool-pref: "ando.content-drop-shadow") {
+  #zen-tabbox-wrapper {
+    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.5));
+  }
+}
+
 /* ---------- Hide Close Tab Button ---------- */
 @media (-moz-bool-pref: "ando.hide-close-tab") {
   .tab-close-button {

@@ -36,6 +36,12 @@
     "defaultValue": true
   },
   {
+    "property": "ando.content-drop-shadow",
+    "label": "Display a drop shadow around the main browser content",
+    "type": "checkbox",
+    "defaultValue": true
+  },
+  {
     "property": "ando.hide-close-tab",
     "label": "Removes the close tab button",
     "type": "checkbox",
