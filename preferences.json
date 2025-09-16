@@ -54,6 +54,12 @@
     "defaultValue": true
   },
   {
+    "property": "ando.hide-window-buttons",
+    "label": "Removes the window buttons on macOS",
+    "type": "checkbox",
+    "defaultValue": true
+  },
+  {
     "property": "ando.hide-workspace-bar",
     "label": "Removes the current workspace indicator",
     "type": "checkbox",

@@ -170,6 +170,13 @@
   }
 }
 
+/* ---------- Hide Window Buttons on macOS ---------- */
+@media (-moz-bool-pref: "ando.hide-window-buttons") {
+  .titlebar-buttonbox-container {
+    display: none !important;
+  }
+}
+
 /* ---------- Hide Workspace Bar ---------- */
 @media (-moz-bool-pref: "ando.hide-workspace-bar") {
   .zen-current-workspace-indicator {
