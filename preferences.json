@@ -24,18 +24,6 @@
     "defaultValue": true
   },
   {
-    "property": "ando.url-bar-height",
-    "label": "Set URL bar height to match tabs",
-    "type": "checkbox",
-    "defaultValue": true
-  },
-  {
-    "property": "ando.urlbar-search-icon",
-    "label": "Display a search icon in the URLbar when the sidebar is collapsed",
-    "type": "checkbox",
-    "defaultValue": true
-  },
-  {
     "property": "ando.content-drop-shadow",
     "label": "Display a drop shadow around the main browser content",
     "type": "checkbox",
