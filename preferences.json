@@ -58,5 +58,17 @@
     "label": "Removes the current workspace indicator",
     "type": "checkbox",
     "defaultValue": true
+  },
+  {
+    "property": "ando.hide-clear-tabs",
+    "label": "Removes the \"Clear\" button on the tab separator",
+    "type": "checkbox",
+    "defaultValue": true
+  },
+  {
+    "property": "ando.urlbar-margin",
+    "label": "Fixes the spacing underneath the urlbar",
+    "type": "checkbox",
+    "defaultValue": true
   }
 ]

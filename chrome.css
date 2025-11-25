@@ -119,3 +119,17 @@
     display: none !important;
   }
 }
+
+/* ---------- Hide Clear Tabs Button ---------- */
+@media (-moz-bool-pref: "ando.hide-clear-tabs") {
+  .zen-workspace-close-unpinned-tabs-button {
+    display: none !important;
+  }
+}
+
+/* ---------- Fix URL Bar Spacing ---------- */
+@media (-moz-bool-pref: "ando.urlbar-margin") {
+  #nav-bar {
+    margin-bottom: 3px !important;
+  }
+}
