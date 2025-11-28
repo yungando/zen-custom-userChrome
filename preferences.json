@@ -70,5 +70,11 @@
     "label": "Fixes the spacing underneath the urlbar",
     "type": "checkbox",
     "defaultValue": true
+  },
+  {
+    "property": "ando.hide-urlbar-suggestions",
+    "label": "Hide suggestions when the urlbar is empty",
+    "type": "checkbox",
+    "defaultValue": true
   }
 ]

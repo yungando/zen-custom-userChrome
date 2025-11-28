@@ -127,9 +127,16 @@
   }
 }
 
-/* ---------- Fix URL Bar Spacing ---------- */
+/* ---------- Fix URLbar Spacing ---------- */
 @media (-moz-bool-pref: "ando.urlbar-margin") {
   #nav-bar {
     margin-bottom: 3px !important;
+  }
+}
+
+/* ---------- Hide URLbar Suggestions ---------- */
+@media (-moz-bool-pref: "ando.hide-urlbar-suggestions") {
+  .urlbarView-body-inner:has(.urlbarView-row[type="top_site"]) {
+    display: none !important;
   }
 }
