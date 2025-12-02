@@ -76,5 +76,11 @@
     "label": "Hide suggestions when the urlbar is empty",
     "type": "checkbox",
     "defaultValue": true
+  },
+  {
+    "property": "ando.hide-splitview-highlight",
+    "label": "Hide the selected tab highlight in splitview",
+    "type": "checkbox",
+    "defaultValue": true
   }
 ]

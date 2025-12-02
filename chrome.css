@@ -142,3 +142,10 @@
     display: none !important;
   }
 }
+
+/* ---------- Hide Split View Highlight ---------- */
+@media (-moz-bool-pref: "ando.hide-splitview-highlight") {
+  #tabbrowser-tabpanels[zen-split-view="true"] .browserSidebarContainer.deck-selected {
+    outline: var(--zen-colors-border) !important;
+  }
+}
