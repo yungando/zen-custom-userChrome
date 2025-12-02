@@ -56,25 +56,17 @@
   #zenToolbarThemePicker,
   #toolbar-context-customize,
   #context-bookmarkpage,
-  #menuitem-iconic context-menu-add-engine {
+  #zen-context-menu-compact-mode-toggle,
+  #toolbar-context-selectAllTabs,
+  #context-zenOpenLinkInGlance,
+  #context-zenSplitLink,
+  #context-copy-link-to-highlight,
+  #context-copy-clean-link-to-highlight,
+  #toolbar-context-move-to-panel,
+  #toolbar-context-remove-from-toolbar,
+  #strip-on-share,
+  .context-menu-add-engine {
     display: none !important;
-  }
-
-  #zen-context-menu-compact-mode-toggle>label {
-    font-size: 0;
-  }
-
-  #zen-context-menu-compact-mode-toggle>label:before {
-    content: "Toggle compact mode";
-    font: menu;
-  }
-
-  #zen-context-menu-compact-mode-toggle>image.menu-icon {
-    visibility: collapse !important;
-  }
-
-  menuitem.context-menu-add-engine[anonid="add-engine-0"] {
-    visibility: collapse !important;
   }
 }
 
