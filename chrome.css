@@ -77,6 +77,7 @@
   #context-sendvideo,
   #context-copyvideourl,
   #context_unloadTab,
+  .tab-context-line,
   #strip-on-share,
   .context-menu-add-engine {
     display: none !important;
