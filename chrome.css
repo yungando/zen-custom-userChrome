@@ -142,8 +142,10 @@
 /* ---------- Hide URLbar Suggestions ---------- */
 @media (-moz-bool-pref: "ando.hide-urlbar-suggestions") {
 
-  #urlbar:has(#urlbar-input:placeholder-shown) #urlbar-results,
-  .urlbarView-row[type="top_site"] {
+  #urlbar:has(#urlbar-input:placeholder-shown) .urlbarView-body-inner,
+  .urlbarView-row[type="top_site"],
+  .urlbarView-row[type="history_serp"],
+  .urlbarView-row[type="search_serp"] {
     display: none !important;
   }
 }
