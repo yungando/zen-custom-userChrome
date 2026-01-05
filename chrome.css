@@ -78,6 +78,7 @@
   .share-tab-url-item,
   #strip-on-share,
   #context_zen-add-essential,
+  #context-stripOnShareLink,
   .context-menu-add-engine {
     display: none !important;
   }
